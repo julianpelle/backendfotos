@@ -54,6 +54,10 @@ app.get('/fotos/:folderName', async (req, res) => {
   }
 });
 
+app.get('/api/ping', (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 app.listen(3000, () => {
   console.log('server running');
 });
